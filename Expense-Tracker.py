@@ -7,7 +7,7 @@ import datetime as dt
 from tkinter import messagebox
 
 #2 class, constructor and methods 
-class Database:
+class Expense_Tracker:
     def __init__(self, db):
         self.conn = sqlite3.connect(db)
         self.cur = self.conn.cursor()
@@ -37,7 +37,7 @@ class Database:
     def __del__(self):
         self.conn.close()
  # object for database
-data = Database(db='test.db')
+data = Expense_Tracker(db='test.db')
 
 # global variables
 count = 0
